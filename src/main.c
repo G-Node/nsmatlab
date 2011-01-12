@@ -243,16 +243,21 @@ typedef int BOOL;
 
 #else
 
+#ifndef __APPLE__
     int _fini(void);
+#endif
 
     int __attribute__ ((destructor)) mexprog_fini (void)
     {
         if (g_nsDllHandle)
             ns_CloseLibrary(g_nsDllHandle);
 
+#ifndef __APPLE__
         // Chain the stdlib _fini to make sure any necessary
         // cleanup is completed properly.
         _fini();
+#endif __APPLE__
+
         return 0;
     }
 
