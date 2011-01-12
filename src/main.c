@@ -1539,7 +1539,7 @@ ns_RESULT fIndexByTime(UINT32 hFile, size_t ncols, double *pdEntityID, double dT
 ns_RESULT fTimeByIndex(UINT32 hFile, UINT32 dwEntityID, UINT32 dwIndexCount, double * pdIndex, mxArray **ppmxTime)
 {
     double * adTime = 0;
-    ns_RESULT nsresult;
+    ns_RESULT nsresult = ns_BADINDEX;
     UINT32 i;
 
     // Let's get our space
