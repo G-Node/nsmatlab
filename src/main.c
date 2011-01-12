@@ -1326,7 +1326,7 @@ ns_RESULT fSegmentData(UINT32 hFile, size_t ncolsEntity, double *pdEntityID, siz
     // Check whether there actually is data or whether the size of it is defined
     if (0 < dwMaxSampleCount)
     {
-        const size_t dims[] = {dwMaxSampleCount, ncolsIndex, ncolsEntity};
+        const int dims[] = {dwMaxSampleCount, ncolsIndex, ncolsEntity};
         pdData = calloc(dwMaxSampleCount, 8);
         *ppmxData = mxCreateNumericArray(3, dims, mxDOUBLE_CLASS, mxREAL);
         *ppmxTimeStamp = mxCreateDoubleMatrix(ncolsIndex, ncolsEntity, mxREAL);
