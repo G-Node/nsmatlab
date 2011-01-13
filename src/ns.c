@@ -239,6 +239,31 @@ static void _setSearchPath (char *so_name) {
 
 #endif
 
+/*=========================================================================
+| MacOS X SUPPORT
+ ========================================================================*/
+#ifdef __APPLE__
+#include <stdio.h>
+#include <stdlib.h>
+#include <unistd.h>
+#include <string.h>
+#include <dlfcn.h>
+#include <fcntl.h>
+
+#define DLL_HANDLE  void *
+#define SO_EXT      ".dylib"
+#define stricmp              strcasecmp
+
+static void _setSearchPath (char *so_name)
+{
+    /* NOOP for now */
+    /*_NSGetExecutablePath () should to the trick,
+      although I am not really sure this functionality
+      is actually usefull  */
+}
+
+#endif
+
 
 /*=========================================================================
 | WINDOWS SUPPORT
