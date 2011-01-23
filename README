@@ -10,11 +10,14 @@ This software package allows the use of Neuroshare Libraries from Matlab.
 Installation
 ------------
 
+Precompiled packages can be obtained from:
+	    https://github.com/G-Node/nsmatlab/archives/master
+
 Add the directory containing the Matlab script files (*.m) and the 'mexprog'
 library to Matlab path. See the Matlab documentation how to do so:
 	http://www.mathworks.com/help/techdoc/ref/path.html
 
-In addition to that the Neuroshare Vendor DLLs must be obtained and installed.
+In addition to that the Neuroshare vendor DLLs must be obtained and installed.
 A (possible incomplete and outdated) list of available DLLs can be found at the
 Neuroshare homepage:
 	   http://neuroshare.sourceforge.net/DLLLinks.shtml
