@@ -1,0 +1,87 @@
+Neuroshare Bindings for Matlab
+==============================
+
+Overview
+--------
+
+This software package allows the use of Neuroshare Libraries from Matlab.
+
+
+Installation
+------------
+
+Add the directory containing the Matlab script files (*.m) and the 'mexprog'
+library to Matlab path. See the Matlab documentation how to do so:
+	http://www.mathworks.com/help/techdoc/ref/path.html
+
+In addition to that the Neuroshare Vendor DLLs must be obtained and installed.
+A (possible incomplete and outdated) list of available DLLs can be found at the
+Neuroshare homepage:
+	   http://neuroshare.sourceforge.net/DLLLinks.shtml
+
+
+Usage
+-----
+
+The both examples 'Example' and 'ExampleAnalog' contained in the
+'Examples' directory can be used as a demonstration of how to 
+use Neuroshare from Matlab and thus provide a good starting point
+to develop custom scripts.
+
+The full documentation of the API can be found here:
+     http://neuroshare.sourceforge.net/Matlab-Import-Filter/NeuroshareMatlabAPI-2-2.htm
+
+
+API Reference
+-------------
+
+The summary of the API (take form the API documentation listed above):
+
+ Managing DLLs
+   ns_SetLibrary – assign the DLL to be used for future function calls
+
+ Library Version Information
+   ns_GetLibraryInfo – get library version information
+
+ Managing Neural Data Files
+   ns_OpenFile  – opens a neural data file
+   ns_GetFileInfo – retrieves file information and entity counts
+   ns_CloseFile – closes a neural data file
+
+ General Entity Information
+   ns_GetEntityInfo – retrieves general entity information and type
+
+ Accessing Event Entities
+   ns_GetEventInfo – retrieves information specific to event entities
+   ns_GetEventData – retrieves event data by index
+
+ Accessing Analog Entities
+   ns_GetAnalogInfo – retrieves information specific to analog entities
+   ns_GetAnalogData – retrieves analog data by index
+
+ Accessing Segment Entities
+    ns_GetSegmentInfo – retrieves information specific to segment entities
+    ns_GetSegmentSourceInfo – retrieves information about the sources that
+                              generated the segment data
+    ns_GetSegmentData – retrieves segment data by index
+
+ Accessing Neural Event Entities
+    ns_GetNeuralInfo – retrieves information for neural event entities
+    ns_GetNeuralData – retrieves neural event data by index
+
+ Searching Entity Indexes
+    ns_GetIndexByTime – retrieves an entity index by time
+    ns_GetTimeByIndex – retrieves time range from entity indexes
+
+ Obtaining Meaningful Error Messages
+     ns_GetLastErrorMsg – retrieves the most recent text error message
+
+
+Credits
+-------
+The Matlab Bindings/Import Filter was developed by the Neuroshare project.
+Minor modification were made by the German Neuroinformatics Node (G-Node).
+For more information visit the respective website:
+	http://neuroshare.sourceforge.net/ 
+        http://www.g-node.org 
+
