@@ -65,7 +65,7 @@ dist: $(TARGET)
 	@cp $(TARGET) $(TARNAME)/
 	@mkdir -p $(TARNAME)/Examples
 	@cp examples/*.m $(TARNAME)/Examples/
-	$(QUIET_STRIP)$(STRIP) $(TARNAME)/$(TARGET_BIN)
+	$(QUIET_STRIP)$(STRIP) -x $(TARNAME)/$(TARGET_BIN)
 	$(QUIET_TAR)$(TAR) -c -f $(TARNAME).tar $(TARNAME)
 	$(QUIET_GZIP)$(GZIP) -f -9 $(TARNAME).tar
 	@rm -rf $(TARNAME)
