@@ -256,7 +256,7 @@ typedef int BOOL;
         // Chain the stdlib _fini to make sure any necessary
         // cleanup is completed properly.
         _fini();
-#endif __APPLE__
+#endif
 
         return 0;
     }
